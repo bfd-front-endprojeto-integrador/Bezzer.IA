@@ -1,5 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import "../global.css"
+import gaugeImg from '../assets/imgs/gauge.jpg';
+import homeIcon from '../assets/imgs/Home.png';
+import logoSvg from '../assets/imgs/logo.svg';
+import notificationsImg from '../assets/imgs/notifications.png';
+import tanque1Img from '../assets/imgs/tanque.jpg';
+import tanque2Img from '../assets/imgs/tanque2.png';
+import tanque3Img from '../assets/imgs/tanque3.png';
+import userImg from '../assets/imgs/User.png';
 
 type NavItem = {
   icon: string;
@@ -30,7 +38,7 @@ export default function App() {
     <>
       <header className="header">
         <div className="header-content">
-          <img src="assets/logo.svg" alt="Logo" className="logo" />
+          <img src={logoSvg} alt="Logo" className="logo" />
           <div className="titulo1">
             <span>Olá,</span>
             <strong>pecuarista!</strong>
@@ -53,9 +61,9 @@ export default function App() {
             <h3 className="nome-tanque">Tanque Barriguinha Mole</h3>
             <div className="conteudo-tanque">
               <div className="box-tanque">
-                <img src="assets/tanque.jpg" alt="Tanque" className="icone-tanque" />
+                <img src={tanque1Img}alt="Tanque" className="icone-tanque" />
               </div>
-              <img src="assets/gauge.jpg" alt="Indicador" className="icone-gauge" />
+              <img src={gaugeImg} alt="Indicador" className="icone-gauge" />
             </div>
             <div className="legendas">
               <div className="info"><span>Volume</span><strong>10.000 L</strong></div>
@@ -68,9 +76,9 @@ export default function App() {
             <h3 className="nome-tanque">Tanque Barriguinha Dura</h3>
             <div className="conteudo-tanque">
               <div className="box-tanque">
-                <img src="assets/tanque2.png" alt="Tanque" className="icone-tanque" />
+                <img src={tanque1Img} alt="Tanque" className="icone-tanque" />
               </div>
-              <img src="assets/gauge.jpg" alt="Indicador" className="icone-gauge" />
+              <img src={gaugeImg} alt="Indicador" className="icone-gauge" />
             </div>
             <div className="legendas">
               <div className="info"><span>Volume</span><strong>15.000 L</strong></div>
@@ -83,9 +91,9 @@ export default function App() {
             <h3 className="nome-tanque">Tanque Piracanjuba</h3>
             <div className="conteudo-tanque">
               <div className="box-tanque">
-                <img src="assets/tanque3.png" alt="Tanque" className="icone-tanque" />
+                <img src={tanque2Img} alt="Tanque" className="icone-tanque" />
               </div>
-              <img src="assets/gauge.jpg" alt="Indicador" className="icone-gauge" />
+              <img src={gaugeImg} alt="Indicador" className="icone-gauge" />
             </div>
             <div className="legendas">
               <div className="info"><span>Volume</span><strong>12.000 L</strong></div>
@@ -98,9 +106,9 @@ export default function App() {
             <h3 className="nome-tanque">Tanque Mimosa</h3>
             <div className="conteudo-tanque">
               <div className="box-tanque">
-                <img src="" alt="Tanque" className="icone-tanque" />
+                <img src={tanque1Img} alt="Tanque" className="icone-tanque" />
               </div>
-              <img src="assets/gauge.jpg" alt="Indicador" className="icone-gauge" />
+              <img src={gaugeImg} alt="Indicador" className="icone-gauge" />
             </div>
             <div className="legendas">
               <div className="info"><span>Volume</span><strong>16.000 L</strong></div>
