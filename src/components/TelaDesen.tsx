@@ -1,5 +1,5 @@
 import "../global.css";
-import backIcon from "../assets/arrowback.png";
+import backIcon from "../assets/icons/arrowback.png";
 import { Link } from "react-router";
 
 function TelaDesenvolvimento() {

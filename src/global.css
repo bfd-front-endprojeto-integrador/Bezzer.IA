@@ -95,3 +95,106 @@
   }
 }
 /* Fim css tela em desenvolvimento */
+
+/* começo css splashscreen */
+
+.splash-container{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 15px;
+  font-family: "Poppins";
+  height: 100vh;
+  background-color: #f6f4ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* fim css splashscreen */
+
+/* começo css tela login */
+
+.tela-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color:#f1ede1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: "Poppins";
+}
+
+
+.formulario-bloco {
+  margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 320px;       
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+
+.label-texto {
+    text-align: left;       
+    margin-bottom: 5px;
+    margin-left: 10px;      
+    color: #333;
+    font-weight: 00;
+}
+
+.logo-img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.titulo-logo {
+    color: #458452; 
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    text-align: left; 
+}
+
+.label-texto {
+    color: #458452;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;  
+    margin-left: 0;      
+    margin-bottom: 5px;
+}
+
+.esqueceu-senha {
+    color: #458452;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 0 20px 0;
+}
+.tela-box{
+  padding: 60px;
+  width: 1000px;
+  background-color: #f5f5f0;
+  border-radius: 30px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+/* fim tela login */
+
+
