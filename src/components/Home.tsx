@@ -8,22 +8,24 @@ import tanque1Img from '../assets/imgs/tanque.jpg';
 import tanque2Img from '../assets/imgs/tanque2.png';
 import tanque3Img from '../assets/imgs/tanque3.png';
 import userImg from '../assets/imgs/User.png';
+import { useNavigate } from "react-router-dom";
 
 type NavItem = {
   icon: string;
   alt: string;
+  to: string;
 };
 
 export default function App() {
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState<number>(0);
-
   const itemsRef = useRef<(HTMLButtonElement | null)[]>([]);
   const indicatorRef = useRef<HTMLSpanElement | null>(null);
 
   const navItems: NavItem[] = [
-    { icon: "assets/notifications.png", alt: "Adicionar" },
-    { icon: "assets/Home.png", alt: "Home" },
-    { icon: "assets/User.png", alt: "Perfil" },
+    { icon: notificationsImg, alt: "Adicionar", to: "/notificacoes" },
+    { icon: homeIcon, alt: "Home", to: "/home" },
+    { icon: userImg, alt: "Perfil", to: "/perfil" },
   ];
 
   useEffect(() => {
@@ -127,7 +129,10 @@ export default function App() {
                   itemsRef.current[index] = el;
                 }}
                 className={`nav-item ${activeIndex === index ? "active" : ""}`}
-                onClick={() => setActiveIndex(index)}
+                onClick={() => {
+                  setActiveIndex(index);
+                  navigate(item.to);
+                }}
               >
                 <img src={item.icon} alt={item.alt} />
               </button>
