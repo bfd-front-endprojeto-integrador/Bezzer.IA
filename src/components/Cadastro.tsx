@@ -4,7 +4,7 @@ import Button from "./Button/Button";
 import { useNavigate } from "react-router-dom";
 
 function Cadastro() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <>
       <div className="tela-container">
