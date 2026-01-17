@@ -6,6 +6,7 @@ import Login from "../components/Login"
 import Cadastro from '../components/Cadastro';
 import Perfil from "../pages/Perfil/Perfil";
 import Notification from '../components/Notification';
+import Historico from "../components/Historico"
 
 function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ function AppRoutes() {
       <Route path="/cadastro" element={<Cadastro/>} />
       <Route path="/perfil" element={<Perfil/>} />
       <Route path="/notificacoes" element={<Notification />} />
+      <Route path="/historico" element={<Historico/>} />
     </Routes>
   )
 }
