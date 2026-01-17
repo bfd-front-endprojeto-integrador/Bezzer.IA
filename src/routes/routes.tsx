@@ -5,7 +5,7 @@ import Splash from "../components/splash"
 import Login from "../components/Login"
 import Cadastro from '../components/Cadastro';
 import Perfil from "../pages/Perfil/Perfil";
-
+import Historico from "../components/Historico"
 function AppRoutes() {
   return (
     <Routes>
@@ -15,6 +15,7 @@ function AppRoutes() {
       <Route path="/cadastro" element={<Cadastro/>} />
       <Route path="/perfil" element={<Perfil/>} />
       <Route path="/notificacoes" element={<TelaDesenvolvimento/>} />
+      <Route path="/historico" element={<Historico/>} />
     </Routes>
   )
 }
