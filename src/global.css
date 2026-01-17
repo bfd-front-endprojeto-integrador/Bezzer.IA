@@ -281,7 +281,9 @@ body {
 }
 
 .logo {
-    height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main {
