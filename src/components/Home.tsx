@@ -18,7 +18,7 @@ type NavItem = {
 
 export default function App() {
   const navigate = useNavigate();
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [activeIndex, setActiveIndex] = useState<number>(1);
   const itemsRef = useRef<(HTMLButtonElement | null)[]>([]);
   const indicatorRef = useRef<HTMLSpanElement | null>(null);
 
