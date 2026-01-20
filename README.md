@@ -81,8 +81,6 @@ Cores sugeridas (paleta do produto):
 ## Tecnologias
 Este repositório contém um **front-end em TypeScript** (SPA) com estrutura típica de projeto moderno (Vite), além de CSS e configurações de lint.
 
-> Se você quiser deixar esta seção ainda mais precisa, basta listar aqui as libs do `package.json` (ex.: UI, roteamento, gráficos, etc.).
-
 ---
 
 ## Como rodar o projeto localmente
