@@ -11,11 +11,6 @@ Este aplicativo (Android e iOS) oferece aos produtores de leite uma forma simple
 - [Identidade visual](#identidade-visual)
 - [Tecnologias](#tecnologias)
 - [Como rodar o projeto localmente](#como-rodar-o-projeto-localmente)
-- [Configurações e variáveis de ambiente](#configurações-e-variáveis-de-ambiente)
-- [Estrutura de pastas](#estrutura-de-pastas)
-- [Roadmap](#roadmap)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
 
 ---
 
