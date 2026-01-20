@@ -4,10 +4,13 @@ import "../global.css";
 import logoSvg from "../assets/icons/logobezerrIA.svg";
 
 import gaugeImg from "../assets/imgs/gauge.jpg";
+
+/*
 import gaugeAlerta from "../assets/imgs/gauge-amarelo.png";
 import gaugeCritico from "../assets/imgs/gauge-vermelho.png";
+*/
 
-import tanque1Img from "../assets/imgs/tanque.png";
+import tanque1Img from "../assets/imgs/tanque.jpg";
 import tanque2Img from "../assets/imgs/tanque2.png";
 import tanque3Img from "../assets/imgs/tanque3.png";
 
@@ -60,6 +63,7 @@ export default function Home() {
       <section className="area-tanques">
         <h2 className="titulo">Selecione seus tanques</h2>
 
+        {/*                                       so tirar essa linha
         {tanquesFiltrados.map(tanque => {
           let imagemGauge = gaugeImg;
           if (tanque.status === "critico") imagemGauge = gaugeCritico;
@@ -84,6 +88,7 @@ export default function Home() {
             </section>
           );
         })}
+                                                e essa */}
       </section>
     </>
   );
