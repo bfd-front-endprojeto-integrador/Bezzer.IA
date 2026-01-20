@@ -45,10 +45,6 @@ Na prática, ele permite:
 ---
 
 ## Demonstração
-> Dica: deixe prints das telas no repositório para vender a ideia rapidamente.
-
-### Screenshots (sugestão)
-Crie a pasta `docs/screenshots/` e adicione as imagens com estes nomes:
 
 - `docs/screenshots/tela-tanque.png`
 - `docs/screenshots/tela-historico.png`
