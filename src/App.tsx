@@ -1,11 +1,29 @@
-import AppRoutes from "./routes/routes"
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+import AppLayout from "./components/AppLayout";
+
+import Home from "./components/Home";
+import Splash from "./components/SplashScreen/splashscreen";
+import Login from "./components/Login";
+import Cadastro from "./components/Cadastro";
+import Perfil from "./pages/Perfil/Perfil";
+import Notification from "./components/Notification";
+import Historico from "./components/Historico";
+
+export default function App() {
   return (
-    <>
-   <AppRoutes /> 
-    </>
-  )
-};
+    <Routes>
+      <Route path="/" element={<Splash />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/cadastro" element={<Cadastro />} />
+      
+      <Route element={<AppLayout />}>
+        <Route path="/home" element={<Home />} />
+        <Route path="/perfil" element={<Perfil />} />
+        <Route path="/notificacoes" element={<Notification />} />
+        <Route path="/historico" element={<Historico />} />
+      </Route>
 
-export default App;
+    </Routes>
+  );
+}

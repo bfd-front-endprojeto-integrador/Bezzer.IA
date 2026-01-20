@@ -1,40 +1,38 @@
-import { useEffect, useRef, useState } from "react";
-import "../global.css"
-import gaugeImg from '../assets/imgs/gauge.jpg';
-import homeIcon from '../assets/imgs/Home.png';
-import logoSvg from '../assets/imgs/logo.svg';
-import notificationsImg from '../assets/imgs/notifications.png';
-import tanque1Img from '../assets/imgs/tanque.jpg';
-import tanque2Img from '../assets/imgs/tanque2.png';
-import tanque3Img from '../assets/imgs/tanque3.png';
-import userImg from '../assets/imgs/User.png';
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import "../global.css";
 
-type NavItem = {
-  icon: string;
-  alt: string;
-  to: string;
-};
+import logoSvg from "../assets/icons/logobezerrIA.svg";
 
-export default function App() {
-  const navigate = useNavigate();
-  const [activeIndex, setActiveIndex] = useState<number>(1);
-  const itemsRef = useRef<(HTMLButtonElement | null)[]>([]);
-  const indicatorRef = useRef<HTMLSpanElement | null>(null);
+import gaugeImg from "../assets/imgs/gauge.jpg";
+import gaugeAlerta from "../assets/imgs/gauge-amarelo.png";
+import gaugeCritico from "../assets/imgs/gauge-vermelho.png";
 
-  const navItems: NavItem[] = [
-    { icon: notificationsImg, alt: "Adicionar", to: "/notificacoes" },
-    { icon: homeIcon, alt: "Home", to: "/home" },
-    { icon: userImg, alt: "Perfil", to: "/perfil" },
-  ];
+import tanque1Img from "../assets/imgs/tanque.png";
+import tanque2Img from "../assets/imgs/tanque2.png";
+import tanque3Img from "../assets/imgs/tanque3.png";
 
-  useEffect(() => {
-    const activeItem = itemsRef.current[activeIndex];
+export default function Home() {
+  const [todosOsTanques] = useState([
+    { id: 1, nome: "Tanque Barriguinha Mole", vol: "10.000 L", ph: 6.7, temp: 4, img: tanque1Img, status: "critico", data: "2025-01-15" },
+    { id: 2, nome: "Tanque Barriguinha Dura", vol: "15.000 L", ph: 6.3, temp: 3.8, img: tanque1Img, status: "normal", data: "2025-01-10" },
+    { id: 3, nome: "Tanque Piracanjuba", vol: "12.000 L", ph: 6.5, temp: 3.9, img: tanque2Img, status: "normal", data: "2025-01-20" },
+    { id: 4, nome: "Tanque Mimosa", vol: "11.000 L", ph: 6.0, temp: 3.2, img: tanque3Img, status: "alerta", data: "2025-01-20" },
+  ]);
 
-    if (activeItem && indicatorRef.current) {
-      indicatorRef.current.style.left = `${activeItem.offsetLeft}px`;
-    }
-  }, [activeIndex]);
+  const [filtroAtivo, setFiltroAtivo] = useState("Críticos");
+
+  const tanquesFiltrados = [...todosOsTanques]
+    .sort((a, b) => {
+      if (filtroAtivo === "A – Z") return a.nome.localeCompare(b.nome);
+      if (filtroAtivo === "Mais recentes") return +new Date(b.data) - +new Date(a.data);
+      if (filtroAtivo === "Mais antigos") return +new Date(a.data) - +new Date(b.data);
+      return 0;
+    })
+    .filter(tanque =>
+      filtroAtivo === "Críticos"
+        ? tanque.status === "critico" || tanque.status === "alerta"
+        : true
+    );
 
   return (
     <>
@@ -42,109 +40,51 @@ export default function App() {
         <div className="header-content">
           <img src={logoSvg} alt="Logo" className="logo" />
           <div className="titulo1">
-            <span>Olá,</span>
-            <strong>pecuarista!</strong>
+            <span>Olá,</span> <strong>pecuarista!</strong>
           </div>
         </div>
       </header>
 
-      <main className="main">
-        <section className="filtros">
-          <button className="filtro ativo">Críticos</button>
-          <button className="filtro">Mais recentes</button>
-          <button className="filtro">Mais antigos</button>
-          <button className="filtro">A – Z</button>
-        </section>
+      <section className="filtros">
+        {["Críticos", "Mais recentes", "Mais antigos", "A – Z"].map(label => (
+          <button
+            key={label}
+            className={`filtro ${filtroAtivo === label ? "ativo" : ""}`}
+            onClick={() => setFiltroAtivo(label)}
+          >
+            {label}
+          </button>
+        ))}
+      </section>
 
-        <section className="area-tanques">
-          <h2 className="titulo">Selecione seus tanques</h2>
+      <section className="area-tanques">
+        <h2 className="titulo">Selecione seus tanques</h2>
 
-          <section className="container-tanque">
-            <h3 className="nome-tanque">Tanque Barriguinha Mole</h3>
-            <div className="conteudo-tanque">
-              <div className="box-tanque">
-                <img src={tanque1Img}alt="Tanque" className="icone-tanque" />
+        {tanquesFiltrados.map(tanque => {
+          let imagemGauge = gaugeImg;
+          if (tanque.status === "critico") imagemGauge = gaugeCritico;
+          if (tanque.status === "alerta") imagemGauge = gaugeAlerta;
+
+          return (
+            <section key={tanque.id} className={`container-tanque ${tanque.status}`}>
+              <h3 className="nome-tanque">{tanque.nome}</h3>
+
+              <div className="conteudo-tanque">
+                <div className="box-tanque">
+                  <img src={tanque.img} alt="Tanque" className="icone-tanque" />
+                </div>
+                <img src={imagemGauge} alt="Indicador" className="icone-gauge" />
               </div>
-              <img src={gaugeImg} alt="Indicador" className="icone-gauge" />
-            </div>
-            <div className="legendas">
-              <div className="info"><span>Volume</span><strong>10.000 L</strong></div>
-              <div className="info"><span>pH</span><strong>6,7</strong></div>
-              <div className="info"><span>Temperatura</span><strong>4°C</strong></div>
-            </div>
-          </section>
 
-          <section className="container-tanque">
-            <h3 className="nome-tanque">Tanque Barriguinha Dura</h3>
-            <div className="conteudo-tanque">
-              <div className="box-tanque">
-                <img src={tanque1Img} alt="Tanque" className="icone-tanque" />
+              <div className="legendas">
+                <div className="info"><span>Volume</span><strong>{tanque.vol}</strong></div>
+                <div className="info"><span>pH</span><strong>{tanque.ph}</strong></div>
+                <div className="info"><span>Temperatura</span><strong>{tanque.temp}°C</strong></div>
               </div>
-              <img src={gaugeImg} alt="Indicador" className="icone-gauge" />
-            </div>
-            <div className="legendas">
-              <div className="info"><span>Volume</span><strong>15.000 L</strong></div>
-              <div className="info"><span>pH</span><strong>6,3</strong></div>
-              <div className="info"><span>Temperatura</span><strong>3.8°C</strong></div>
-            </div>
-          </section>
-
-          <section className="container-tanque">
-            <h3 className="nome-tanque">Tanque Piracanjuba</h3>
-            <div className="conteudo-tanque">
-              <div className="box-tanque">
-                <img src={tanque2Img} alt="Tanque" className="icone-tanque" />
-              </div>
-              <img src={gaugeImg} alt="Indicador" className="icone-gauge" />
-            </div>
-            <div className="legendas">
-              <div className="info"><span>Volume</span><strong>12.000 L</strong></div>
-              <div className="info"><span>pH</span><strong>6,5</strong></div>
-              <div className="info"><span>Temperatura</span><strong>3.9°C</strong></div>
-            </div>
-          </section>
-
-          <section className="container-tanque">
-            <h3 className="nome-tanque">Tanque Mimosa</h3>
-            <div className="conteudo-tanque">
-              <div className="box-tanque">
-                <img src={tanque1Img} alt="Tanque" className="icone-tanque" />
-              </div>
-              <img src={gaugeImg} alt="Indicador" className="icone-gauge" />
-            </div>
-            <div className="legendas">
-              <div className="info"><span>Volume</span><strong>16.000 L</strong></div>
-              <div className="info"><span>pH</span><strong>6,7</strong></div>
-              <div className="info"><span>Temperatura</span><strong>4°C</strong></div>
-            </div>
-          </section>
-        </section>
-
-        <section className="navbar-wrapper">
-          <nav className="navbar">
-            {navItems.map((item, index) => (
-              <button
-                key={index}
-                ref={(el: HTMLButtonElement | null) => {
-                  itemsRef.current[index] = el;
-                }}
-                className={`nav-item ${activeIndex === index ? "active" : ""}`}
-                onClick={() => {
-                  setActiveIndex(index);
-                  navigate(item.to);
-                }}
-              >
-                <img src={item.icon} alt={item.alt} />
-              </button>
-            ))}
-            <span ref={indicatorRef} className="nav-indicator"></span>
-          </nav>
-        </section>
-      </main>
-
-      <footer>
-        <p className="footer"></p>
-      </footer>
+            </section>
+          );
+        })}
+      </section>
     </>
   );
 }

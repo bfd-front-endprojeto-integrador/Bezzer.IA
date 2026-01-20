@@ -12,22 +12,34 @@ function TelaLogin() {
   const [senha, setSenha] = useState<string>("");
 
   function loginUser() {
-    const usuarioSalvo = localStorage.getItem("usuarioMock");
+  const usuarioSalvo = localStorage.getItem("usuarioMock");
 
-    if (!usuarioSalvo) {
-      alert("Nenhum usuário cadastrado");
-      return;
-    }
-
-    const usuario = JSON.parse(usuarioSalvo);
-
-    if (email === usuario.email && senha === usuario.senha) {
-      localStorage.setItem("logado", "true");
-      navigate("/home");
-    } else {
-      alert("E-mail ou senha inválidos");
-    }
+  if (!usuarioSalvo) {
+    alert("Nenhum usuário cadastrado");
+    return;
   }
+
+  const usuario = JSON.parse(usuarioSalvo);
+
+  if (email === usuario.email && senha === usuario.senha) {
+    localStorage.setItem("logado", "true");
+
+    localStorage.setItem(
+      "usuarioLogado",
+      JSON.stringify({
+        nome: usuario.nome,
+        sobrenome: usuario.sobrenome,
+        email: usuario.email,
+      })
+    );
+
+    navigate("/home");
+  } else {
+    alert("E-mail ou senha inválidos");
+  }
+}
+
+  
 
   return (
     <div className="tela-container">
