@@ -48,10 +48,9 @@ Na prática, ele permite:
 
 Telas de Demonstração do App Bezzer.IA
 
-## Demonstração
 
 <p align="center">
-  <img src="docs/screenshots/logo.png" height="90" alt="Logo Bezerr.IA" />
+  <img src="docs/screenshots/figuralogo.png" height="90" alt="Logo Bezerr.IA" />
 </p>
 
 <p align="center">
@@ -61,29 +60,9 @@ Telas de Demonstração do App Bezzer.IA
   <img src="docs/screenshots/telahometank.jpeg" width="240" alt="Tela de Perfil" />
 </p>
 
-> Dica: as imagens acima são apenas screenshots do app para apresentar rapidamente a proposta e as telas principais.
+As imagens acima são apenas screenshots do app para apresentar rapidamente a proposta e as telas principais.
+Não significa que são as telas finais, pois estão em reprodução.
 
-
-- `docs/screenshots/tela-tanque.png`
-- `docs/screenshots/tela-historico.png`
-- `docs/screenshots/tela-perfil.png`
-- `docs/screenshots/logo.png`
-
-Depois, habilite a seção abaixo:
-
-<!--
-<p align="center">
-  <img src="docs/screenshots/logo.png" height="90" alt="Logo Bezzer.IA" />
-</p>
-
-<p align="center">
-  <img src="docs/screenshots/tela-tanque.png" width="230" alt="Tela do Tanque" />
-  <img src="docs/screenshots/tela-historico.png" width="230" alt="Tela de Histórico" />
-  <img src="docs/screenshots/tela-perfil.png" width="230" alt="Tela de Perfil" />
-</p>
--->
-
----
 
 ## Identidade visual
 Cores sugeridas (paleta do produto):
