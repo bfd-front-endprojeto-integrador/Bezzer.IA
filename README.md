@@ -46,6 +46,24 @@ Na prática, ele permite:
 
 ## Demonstração
 
+Telas de Demonstração do App Bezzer.IA
+
+## Demonstração
+
+<p align="center">
+  <img src="docs/screenshots/logo.png" height="90" alt="Logo Bezerr.IA" />
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/Tela de Login.png" width="240" alt="Tela do Tanque" />
+  <img src="docs/screenshots/Tela historico.png" width="240" alt="Tela de Histórico" />
+  <img src="docs/screenshots/Tela do Perfil.png" width="240" alt="Tela de Histórico" />
+  <img src="docs/screenshots/telahometank.jpeg" width="240" alt="Tela de Perfil" />
+</p>
+
+> Dica: as imagens acima são apenas screenshots do app para apresentar rapidamente a proposta e as telas principais.
+
+
 - `docs/screenshots/tela-tanque.png`
 - `docs/screenshots/tela-historico.png`
 - `docs/screenshots/tela-perfil.png`
