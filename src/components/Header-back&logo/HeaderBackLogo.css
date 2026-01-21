@@ -7,7 +7,7 @@
     max-height: 100px;
 }
 
-.back {
+.perfil-back {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -25,14 +25,14 @@
   color: #000;
 }
 
-.logo {
+.perfil-logo {
     max-height: 100px;
     display: flex;
     justify-content: center;
     margin: 0px;
 }
 
-.back-2 {
+.perfil-back-2 {
   display: flex;
   justify-content: flex-start;
   align-items: center   ;

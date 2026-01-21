@@ -1,0 +1,84 @@
+.perfil-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    width: 100%;
+    border-bottom: 1px solid #f3f3f3;
+    text-decoration: none;
+}
+
+.perfil-button-option {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.perfil-button-option img {
+    width: 24px;
+    height: 24px;
+}
+
+.perfil-button-option p {
+    margin: 0;
+    font-size: 16px;
+    color: #1b1b1b;
+}
+
+.perfil-button-right-area {
+    display: flex;
+    align-items: center;
+}
+
+.perfil-button-right-text {
+    color: #007bff;
+    margin-right: 8px;
+    font-weight: 600;
+}
+
+.perfil-button-forward img {
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+}
+
+/* Responsividade dos botões do perfil */
+@media (min-width: 768px) {
+    .perfil-button-container {
+        padding: 16px 0;
+    }
+
+    .perfil-button-option img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .perfil-button-option p {
+        font-size: 18px;
+    }
+
+    .perfil-button-right-text {
+        margin-right: 12px;
+        font-size: 15px;
+    }
+
+    .perfil-button-forward img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .perfil-button-container {
+        padding: 18px 0;
+    }
+
+    .perfil-button-option img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .perfil-button-option p {
+        font-size: 18px;
+    }
+}

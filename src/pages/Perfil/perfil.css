@@ -1,0 +1,102 @@
+.perfil-card {
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    height: 68vh;
+    margin: 0px 16px;
+    padding: 32px 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.perfil-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.perfil-avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 6px solid #1f8f7a;
+    background: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.perfil-avatar-inner {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.perfil-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+.perfil-options {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.perfil-exit {
+    margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+    .perfil-card {
+        max-width: 720px;
+        margin: 24px auto;
+        padding: 40px;
+        height: auto;
+        border-radius: 20px;
+        align-items: center;
+    }
+
+    .perfil-avatar {
+        width: 112px;
+        height: 112px;
+        border-width: 8px;
+    }
+
+    .perfil-avatar-inner {
+        width: 96px;
+        height: 96px;
+    }
+
+    .perfil-options {
+        width: 100%;
+        max-width: 560px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .perfil-card {
+        max-width: 520px;
+        margin: 40px auto;
+        padding: 48px;
+    }
+
+    .perfil-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .perfil-avatar-inner {
+        width: 104px;
+        height: 104px;
+    }
+}

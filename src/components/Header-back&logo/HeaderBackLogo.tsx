@@ -14,7 +14,7 @@ const HeaderBackLogo = ({pageTitle} : pageProps) => {
   return (
     <>
       <div className="header">
-        <div className="back">
+        <div className="perfil-back">
           <img
             src={BackArrow}
             alt="voltar"
@@ -23,11 +23,11 @@ const HeaderBackLogo = ({pageTitle} : pageProps) => {
           />
           <p className="perfil-page-text">{pageTitle}</p>
         </div>
-        <Link to="/home" className="logo">
+        <Link to="/home" className="perfil-logo">
           <img src={Logo} alt="Logo" />
         </Link>
 
-        <div className="back-2">
+        <div className="perfil-back-2">
           <img
             src={BackArrow}
             alt="voltar"
