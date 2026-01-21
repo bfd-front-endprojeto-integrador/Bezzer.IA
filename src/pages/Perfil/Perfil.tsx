@@ -24,13 +24,13 @@ const Perfil = () => {
         </div>
 
         <div className="perfil-options">
-          <PerfilButton OptionImg={User} OptionText="Editar Perfil" OptionLink="/perfil/editar" />
+          <PerfilButton OptionImg={User} OptionText="Editar Perfil" OptionLink="/telaDesen" />
           <PerfilButton OptionImg={Notification} OptionText="Notificações" OptionLink="/notificacoes" />
-          <PerfilButton OptionImg={Shield} OptionText="Segurança" OptionLink="/perfil/seguranca" />
-          <PerfilButton OptionImg={Language} OptionText="Idiomas" OptionLink="/perfil/idiomas" OptionRightText="English (US)" />
-          <PerfilButton OptionImg={Help} OptionText="Termos e Condições" OptionLink="/perfil/termos" />
-          <PerfilButton OptionImg={Help} OptionText="Ajuda" OptionLink="/perfil/ajuda" />
-          <PerfilButton OptionImg={WebAccessibility} OptionText="Acessibilidade" OptionLink="/perfil/acessibilidade" />
+          <PerfilButton OptionImg={Shield} OptionText="Segurança" OptionLink="/telaDesen" />
+          <PerfilButton OptionImg={Language} OptionText="Idiomas" OptionLink="/telaDesen" OptionRightText="English (US)" />
+          <PerfilButton OptionImg={Help} OptionText="Termos e Condições" OptionLink="/telaDesen" />
+          <PerfilButton OptionImg={Help} OptionText="Ajuda" OptionLink="/telaDesen" />
+          <PerfilButton OptionImg={WebAccessibility} OptionText="Acessibilidade" OptionLink="/telaDesen" />
         </div>
 
         <div className="perfil-options">
