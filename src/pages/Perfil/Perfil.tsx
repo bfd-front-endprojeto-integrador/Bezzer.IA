@@ -33,8 +33,8 @@ const Perfil = () => {
           <PerfilButton OptionImg={WebAccessibility} OptionText="Acessibilidade" OptionLink="/perfil/acessibilidade" />
         </div>
 
-        <div className="perfil-exit">
-          <PerfilButton OptionImg={Shutdown} OptionText="Sair" OptionLink="/logout" />
+        <div className="perfil-options">
+          <PerfilButton OptionImg={Shutdown} OptionText="Sair" OptionLink="/" />
         </div>
       </div>
     </>

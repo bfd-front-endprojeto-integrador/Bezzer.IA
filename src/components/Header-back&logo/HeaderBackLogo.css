@@ -17,6 +17,7 @@
 
 .back-arrow {
   max-height: 32px;
+  cursor: pointer;
 }
 
 .perfil-page-text {
