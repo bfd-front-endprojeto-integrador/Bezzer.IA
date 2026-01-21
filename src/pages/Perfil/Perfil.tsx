@@ -10,7 +10,7 @@ import Shield from "../../assets/icons/Shield.png";
 import Shutdown from "../../assets/icons/Shutdown.png";
 import User from "../../assets/icons/User.png";
 import WebAccessibility from "../../assets/icons/WebAccessibility.png";
-import AvatarExample from "../../assets/imgs/User.png";
+import AvatarExample from "../../assets/imgs/UserPic.png";
 
 const Perfil = () => {
   return (
