@@ -9,6 +9,7 @@ import Cadastro from "./components/Cadastro";
 import Perfil from "./pages/Perfil/Perfil";
 import Notification from "./components/Notification";
 import Historico from "./components/Historico";
+import Tanque from "./components/Tanque"
 
 export default function App() {
   return (
@@ -22,6 +23,8 @@ export default function App() {
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/notificacoes" element={<Notification />} />
         <Route path="/historico" element={<Historico />} />
+        <Route path="/tanque/:id" element={<Tanque />} />
+
       </Route>
 
     </Routes>

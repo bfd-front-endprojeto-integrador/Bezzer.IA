@@ -1,7 +1,7 @@
 import "../global.css";
-import Logo from "../../src/assets/icons/logobezerrIA.svg";
 import { useNavigate } from "react-router-dom";
 
+import HeaderBackLogo from "../components/Header-back&logo/HeaderBackLogo";
 
 export default function History() {
   const navigate = useNavigate(); // Inicializa o navegador
@@ -9,17 +9,7 @@ export default function History() {
   <div className="history">
       <div className="wrapper">
 
-        {/* HEADER */}
-        <header className="top">
-          <img
-            src={Logo}
-            alt="Bezerr IA"
-            className="logo"
-          />
-         <button className="back" onClick={() => navigate("/home")}>
-            Voltar
-          </button>
-        </header>
+        <HeaderBackLogo pageTitle="Histórico" />
 
         {/* CARD COM GRÁFICOS */}
         <main className="card">
